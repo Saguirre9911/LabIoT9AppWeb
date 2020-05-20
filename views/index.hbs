@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+<p>Bienvenido al laboratorio de comunicaciones v1</p>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+    <div class="card-body">
+            {{#if Data}}
+            <ul class="list-group">
+                {{#each Data}}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Captura no: {{DatoNo}} Valor:
+                    {{Grados_sensados}} 
+                    
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+                <p>Aún no se encuentran datos del sensor registrados.</p>
+            {{/if}}
+        </div>
